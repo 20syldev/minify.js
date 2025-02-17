@@ -1,22 +1,22 @@
-# minify.js
+# @20syldev/minify.js
 
-Un module **JavaScript** minimaliste pour minifier n'importe quel code à partir de **chaînes** de caractères, de **fichiers** ou d'**URLs**.
+A minimalist **JavaScript** module to minify any code from **strings**, **files**, or **URLs**.
 
 ## Installation
 
 ```console
-npm install minify.js
+npm install @20syldev/minify.js
 ```
 
-## Utilisation
+## Usage
 
-### Importation
+### Import
 
 ```js
-import { minify, minifyTo } from 'minify.js';
+import { minify, minifyTo } from '@20syldev/minify.js';
 ```
 
-### Minifier une chaîne de caractères
+### Minify a string
 
 ```js
 const result = await minify(`
@@ -27,21 +27,21 @@ const result = await minify(`
 console.log(result);
 ```
 
-### Minifier un fichier
+### Minify a file
 
 ```js
 const result = await minify('./file.js');
 console.log(result);
 ```
 
-### Minifier une URL
+### Minify a URL
 
 ```js
 const result = await minify('https://example.com/script.js');
 console.log(result);
 ```
 
-### Minifier et sauvegarder dans un fichier
+### Minify and save to a file
 
 ```js
 await minifyTo('./file.js', 'file.min.js');
@@ -51,7 +51,7 @@ await minifyTo('./file.js', 'file.min.js');
 await minifyTo('https://example.com/script.js', 'script.min.js');
 ```
 
-## Détails
+## Details
 
-- **`minify(input)`** : Minifie du JavaScript en entrée (chaîne, fichier ou URL) et renvoie une promesse contenant le code minifié.
-- **`minifyTo(input, outputFile)`** : Minifie le JavaScript et enregistre le résultat dans un fichier.
+- **`minify(input)`**: Minifies JavaScript input (string, file, or URL) and returns a promise containing the minified code.
+- **`minifyTo(input, outputFile)`**: Minifies JavaScript and saves the result to a file.
